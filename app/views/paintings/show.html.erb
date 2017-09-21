@@ -1,0 +1,12 @@
+<h1>Listing paintings</h1>
+ 
+<p>
+  <strong>name:</strong>
+  <%= @painting.name %>
+</p>
+<%= image_tag @painting.image.url %>
+
+<%= link_to 'Back', paintings_path %>
+<%= link_to "Destroy", @painting, :confirm => 'Are you sure?', :method => :delete %> |
+
+<%= link_to 'Edit', edit_painting_path(@painting) %> 
