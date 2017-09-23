@@ -33,17 +33,16 @@ class PaintingsController < ApplicationController
 	    render 'edit'
 	  end
 	end
-def destroy
+  def destroy
     @painting = Painting.find(params[:id])
     @painting.destroy
  
     redirect_to paintings_path
   end
+  
 	private
     def painting_params
       params.require(:painting).permit(:name, :image)
-    end
+    end 
 
-
- 
 end
